@@ -34,6 +34,8 @@ function FindProxyForURL(url, host)
 
         ,'youtube.com'
         ,'ytimg.com'
+		
+        ,'chinagfw.org'
     ];
     
     var exp_list = [ ];
