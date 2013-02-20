@@ -36,6 +36,8 @@ function FindProxyForURL(url, host)
         ,'ytimg.com'
 		
         ,'chinagfw.org'
+        ,'solutions.asia'
+		
     ];
     
     var exp_list = [ ];
