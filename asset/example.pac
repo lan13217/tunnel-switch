@@ -38,6 +38,7 @@ function FindProxyForURL(url, host)
         ,'chinagfw.org'
         ,'solutions.asia'
         ,'gstatic.com'
+        ,'wirelesshack.org'
     ];
     
     var exp_list = [ ];
