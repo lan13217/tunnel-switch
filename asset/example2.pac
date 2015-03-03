@@ -3,17 +3,6 @@ function FindProxyForURL(url, host)
     url = url.toLowerCase();
     host = host.toLowerCase();
     
-    
-    var site_list2 = [
-        'sf-express.com'
-    ];
-    for(var index = 0;index<site_list2.length;index++){
-         if(host==site_list2[index] ||
-             shExpMatch(host, "*." + site_list2[index])){
-            return "DIRECT";
-         }
-    }
-    
     // whole site
     var site_list = [
         ,'blogger.com'
@@ -21,7 +10,7 @@ function FindProxyForURL(url, host)
         ,'bit.ly'
 
         ,'feedburner.com'
-        ,'flickr.com's
+        ,'flickr.com'
         ,'friendfeed.com'
         ,'facebook.com'
         ,'facebook.net'
@@ -77,6 +66,16 @@ function FindProxyForURL(url, host)
 	
     // whole site
     //return "DIRECT";
+	
+    var site_list2 = [
+        'sf-express.com'
+    ];
+    for(var index = 0;index<site_list2.length;index++){
+         if(host==site_list2[index] ||
+             shExpMatch(host, "*." + site_list2[index])){
+            return "DIRECT";
+         }
+    }
 
     //Ad
     var site_list3 = [
@@ -91,7 +90,6 @@ function FindProxyForURL(url, host)
             return "SOCKS5 127.0.0.1:123";
          }
     }
-
     return "DIRECT";
 	//return "SOCKS5 10.0.13.79:1080";
 }
